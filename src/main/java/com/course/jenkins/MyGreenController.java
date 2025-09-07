@@ -36,7 +36,7 @@ public class MyGreenController {
   @GetMapping("/random/greeting")
   public String randomGreeting(
     @RequestParam(name = "name", required = true) String name,
-    @RequestParam(name = "age", required = false) int age
+    @RequestParam(name = "age", required = false) Integer age
   ) {
     return service.randomGreeting(name, age);
   }
