@@ -80,22 +80,22 @@ public class MyGreenService {
     }
   }
 
-  public String randomGreeting(String name, int age) {
+  public String randomGreeting(String name) {
     var nowHour = LocalDateTime.now().getHour();
-
+    private static final String wellcome = "nice to meet you";
     if (nowHour < 10) {
-      return "Good morning " + name + ", nice to meet you";
+      return "Good morning " + name + ", + wellcome;
     }
 
     if (nowHour < 16) {
-      return "Good afternoon " + name + ", nice to meet you";
+      return "Good afternoon " + name + ", + wellcome;
     }
 
     if (nowHour < 19) {
-      return "Good evening " + name + ", nice to meet you";
+      return "Good evening " + name + ", + wellcome;
     }
 
-    return "Good night " + name + ", nice to meet you";
+    return "Good night " + name + ", + wellcome;
   }
 
   public int randomInt(int seed) {
